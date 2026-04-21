@@ -51,8 +51,47 @@ files/              — resume.pdf, cswp-cert.png (documents only)
 | Avatar (always) | Blue accent border + 4px glow ring |
 | Avatar hover | `avatarBreath` — expanding glow ring, JS-controlled so cycle completes on mouse-out |
 
+## Project Detail Page — CSS Additions (added 2026-04-15)
+
+New utility classes added to `css/styles.css` for use on project detail pages:
+
+| Class | Purpose |
+|---|---|
+| `.project-figure` | Full-width inline image with `<figcaption>` |
+| `.project-figure-grid` | Two-column image grid (stacks to 1-col on mobile ≤600px) |
+| `.project-stat-row` / `.project-stat` | Row of stat cards — `.project-stat-value` (accent color, 26px) + `.project-stat-label` |
+
+## Project Pages — Status
+
+| Page | File | Status |
+|---|---|---|
+| Automated Precision Seed Dispensing System | `projects/project1.html` | **Content written** — awaiting render images |
+| Project 2 | `projects/project2.html` | Placeholder |
+| Project 3 | `projects/project3.html` | Placeholder |
+| Project 4 | `projects/project4.html` | Placeholder |
+
+### project1.html — Renders Needed
+
+All 6 placeholder slots currently point to `../images/projects/project1.jpg`.
+Replace each with the corresponding render once produced. Captions in the HTML
+describe exactly what each render should show:
+
+| Slot | Location in page | What to render |
+|---|---|---|
+| Hero | `<img class="project-detail-image">` | Full assembly, dramatic angle, dark/neutral background |
+| Exploded | First `.project-figure` after "My Role" | All 4 subassemblies (frame, hopper, shaft, motor) separated |
+| Frame | `.project-figure` after "Sheet Metal Frame" | All 4 sheet metal panels, angle showing bends and cutouts |
+| Hopper | `.project-figure` after "Sliding Hopper" | 3/4 view — window, cam-lock clamp, rails visible |
+| Shaft assembly | `.project-figure` after "Rotating Shaft Assembly" | Motor end to bearing end, full length, isolated |
+| Sleeve + brush (2-up) | `.project-figure-grid` | Left: sleeve slot geometry close-up / Right: hopper brush interface |
+
+### project1.html — Outstanding Content
+
+- Germination rate result (pending real data) — currently omitted from the page
+- Final render background style (dark vs. neutral grey studio) — not yet decided
+
 ## Pending / Outstanding
 
-- **Project images missing**: `images/projects/` is empty — need `project1.jpg` through `project4.jpg`
-- **Project page content**: All 4 project pages have placeholder text — user hasn't filled in real project details yet
+- **Project images missing**: `images/projects/` is empty — `project1.jpg` is a placeholder; real renders needed (see table above). `project2–4.jpg` still needed.
+- **Project pages 2–4**: Still placeholder content — no real project details yet
 - **Contact form not live**: Remove `data-static="true"` and add Formspree ID when ready to deploy
